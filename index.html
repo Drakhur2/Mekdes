@@ -10,13 +10,13 @@
 </head>
 <body>
   <div class="birthday-container">
-    <h1 class="title">🎉 Happy Birthday, karthik! 🎉</h1>
+    <h1 class="title"> Happy Birthday, Mekdes! </h1>
     <canvas id="fireworks-canvas"></canvas>
     <div id="balloons"></div>
     <div id="floating-images">
-      <img src="https://source.unsplash.com/random/100x100?cake" alt="cake" class="float-img" />
-      <img src="https://source.unsplash.com/random/100x100?gift" alt="gift" class="float-img" />
-      <img src="https://source.unsplash.com/random/100x100?party" alt="party" class="float-img" />
+      <img id= "img1 " src="image.png" alt="floating image 1" class="float-img" />
+      <!-- <img id= "img2" src="image2.png" alt="floating image 2" class="float-img" />
+      <img id= "img3" src="image.png" alt="floating image 3" class="float-img" /> -->
     </div>
   </div>
 
@@ -74,6 +74,22 @@
       requestAnimationFrame(animateFireworks);
     }
     animateFireworks();
+        // Change images cyclically
+        const imageSets = [
+        ['image1.png', 'image.png', 'image2.png'],
+      ];
+      let currentSet = 0;
+
+      function changeImages() {
+        currentSet = (currentSet + 1) % imageSets.length;
+        document.getElementById('img1').src = imageSets[currentSet][0];
+        document.getElementById('img2').src = imageSets[currentSet][1];
+        document.getElementById('img3').
+        src = imageSets[currentSet][2];
+      }
+  
+      // Automatically change images every 10 seconds
+      setInterval(changeImages, 400);
   </script>
 </body>
 </html>

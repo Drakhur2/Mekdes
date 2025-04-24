@@ -67,8 +67,8 @@ body {
 
 .float-img {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
   animation: float-img 5s ease-in-out infinite;
 }
 
